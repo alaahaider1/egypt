@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسوان - جوهرة النيل</title>
+    <link rel="stylesheet" href="css/aswan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-city="aswan" data-lat="24.0889" data-lon="32.8998">
+    <div class="transition-overlay" id="transitionOverlay"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">مصر السياحية</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">القاهرة</a></li>
+                <li><a href="alexandria.html">الإسكندرية</a></li>
+                <li><a href="luxor.html">الأقصر</a></li>
+                <li><a href="aswan.html" class="active">أسوان</a></li>
+                <li><a href="sharm.html">شرم الشيخ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle"><i class="fas fa-globe"></i> EN</button>
+                <button class="control-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <button class="control-btn" id="favBtn"><i class="fas fa-heart"></i></button>
+                <button class="control-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="favorites-sidebar" id="favoritesSidebar">
+        <div class="favorites-header">
+            <h3><i class="fas fa-heart"></i> <span class="fav-title">المفضلات</span></h3>
+            <button class="close-fav" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/aswan-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">أسوان</h1>
+            <p class="hero-subtitle">جوهرة النيل</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">3000+</span><span class="stat-label">عام من التاريخ</span></div>
+                <div class="stat"><span class="stat-number">300 ألف</span><span class="stat-label">نسمة</span></div>
+                <div class="stat"><span class="stat-number">25°C</span><span class="stat-label">معدل الحرارة</span></div>
+            </div>
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-main">
+            <i class="fas fa-sun weather-icon" id="weatherIcon"></i>
+            <div class="weather-info">
+                <span class="weather-temp" id="weatherTemp">--°C</span>
+                <span class="weather-desc" id="weatherDesc">--</span>
+            </div>
+        </div>
+        <div class="weather-details" id="weatherDetails"></div>
+    </div>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">تعريف أسوان</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/aswan/5_Philae_Temple_Philae_Island.png" alt="أسوان">
+                </div>
+                <div class="about-text">
+                    <p>أسوان هي مدينة مصرية تقع في جنوب مصر على ضفاف نهر النيل، وتُعرف بـ "جوهرة النيل" لجمال طبيعتها ومناخها المعتدل طوال العام.</p>
+                    <p>تشتهر أسوان بمعبدي فيلة وأبو سمبل العظيمين، والسد العالي أحد أعظم إنجازات الهندسة في القرن العشرين. كما تتميز بثقافتها النوبية الأصيلة وبيوتها الملونة.</p>
+                    <p>تعد أسوان وجهة سياحية شتوية مثالية، حيث تتميز بأجوائها الهادئة والدافئة، وتجمع بين التاريخ العريق والطبيعة الخلابة.</p>
+                    <div class="about-tags">
+                        <span class="tag">نوبة</span>
+                        <span class="tag">نيل</span>
+                        <span class="tag">آثار</span>
+                        <span class="tag">طبيعة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section attractions-section" id="attractions">
+        <div class="container">
+            <h2 class="section-title">الأماكن الأثرية والسياحية</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-lat="24.0255" data-lon="32.8844" data-name="معبد فيلة">
+                    <div class="attraction-image">
+                        <img src="images/aswan/1_Philae_Temple_Philae_Island.png" alt="معبد فيلة">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>معبد فيلة</h3>
+                                <p>معبد رائع يقع على جزيرة أجيلكيا، تم إنقاذه من الغرق بعد بناء السد العالي. يعد من أجمل معابد مصر القديمة.</p>
+                                <div class="attraction-price">سعر التذكرة: 200 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=24.0255,32.8844" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">معبد فيلة</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="philae"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="22.3368" data-lon="31.6252" data-name="معبد أبو سمبل">
+                    <div class="attraction-image">
+                        <img src="images/aswan/8_Abu_Simbel_History_Temples_Map_Images.png" alt="أبو سمبل">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>معبد أبو سمبل</h3>
+                                <p>معبد ضخم نحت في الصخر بناه رمسيس الثاني، يشتهر بظاهرة تعامد الشمس على وجه التمثال مرتين سنوياً.</p>
+                                <div class="attraction-price">سعر التذكرة: 270 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=22.3368,31.6252" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">معبد أبو سمبل</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="abu-simbel"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="23.9705" data-lon="32.8771" data-name="السد العالي">
+                    <div class="attraction-image">
+                        <img src="images/aswan/3_Aswan_High_Dam_Description_History.png" alt="السد العالي">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>السد العالي</h3>
+                                <p>إنجاز هندسي عظيم بني في الستينيات، يحمي مصر من الفيضانات ويوفر الكهرباء. يطل على بحيرة ناصر الضخمة.</p>
+                                <div class="attraction-price">سعر التذكرة: مجاني</div>
+                                <a href="https://maps.google.com/?q=23.9705,32.8771" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">السد العالي</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="high-dam"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="24.0845" data-lon="32.8958" data-name="القرية النوبية">
+                    <div class="attraction-image">
+                        <img src="images/aswan/2_Nubian_Village_in_Aswan_A_Complete.png" alt="القرية النوبية">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>القرية النوبية</h3>
+                                <p>تجربة ثقافية فريدة في بيوت ملونة زاهية، يمكن التعرف على العادات النوبية الأصيلة وشراء الحرف اليدوية.</p>
+                                <div class="attraction-price">الدخول مجاني</div>
+                                <a href="https://maps.google.com/?q=24.0845,32.8958" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">القرية النوبية</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="nubian-village"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/aswan/1_Philae_Temple_Philae_Island.png" alt="معبد فيلة">
+                    <div class="gallery-caption">معبد فيلة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/aswan/8_Abu_Simbel_History_Temples_Map_Images.png" alt="أبو سمبل">
+                    <div class="gallery-caption">معبد أبو سمبل</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/aswan/3_Aswan_High_Dam_Description_History.png" alt="السد العالي">
+                    <div class="gallery-caption">السد العالي</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/aswan/2_Nubian_Village_in_Aswan_A_Complete.png" alt="القرية النوبية">
+                    <div class="gallery-caption">القرية النوبية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/aswan/5_Philae_Temple_Philae_Island.png" alt="جزيرة الفنتين">
+                    <div class="gallery-caption">جزيرة الفنتين</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/aswan/6_swan_High_Dam_Egypt_s_Monumental.png" alt="النيل في أسوان">
+                    <div class="gallery-caption">النيل في أسوان</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <h2 class="section-title">الفنادق والإقامة</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-lat="24.0889" data-lon="32.8998" data-name="سوفيتيل ليجند أولد كاتاراكت">
+                    <div class="hotel-image">
+                        <img src="images/hotels/5_SOFITEL_LEGEND_OLD_CATARACT_ASWAN.png" alt="أولد كاتاراكت">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>سوفيتيل أولد كاتاراكت</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق تاريخي فاخر بني عام 1899 على ضفاف النيل. استضاف أجاثا كريستي ووينستون تشرشل. يتميز بإطلالته الرائعة.</p>
+                                <div class="hotel-price">السعر: من 350$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=24.0889,32.8998" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">سوفيتيل أولد كاتاراكت</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 350$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="old-cataract"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="24.0889" data-lon="32.8998" data-name="موفنبيك جزيرة الفنتين">
+                    <div class="hotel-image">
+                        <img src="images/hotels/9_Sofitel_Legend_Old_Cataract_Aswan.png" alt="موفنبيك الفنتين">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>موفنبيك جزيرة الفنتين</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>منتجع فاخر يقع على جزيرة الفنتين وسط النيل، يقدم إطلالات بانورامية وخدمات عالمية المستوى.</p>
+                                <div class="hotel-price">السعر: من 200$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=24.0889,32.8998" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">موفنبيك الفنتين</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 200$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="movenpick"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="24.0889" data-lon="32.8998" data-name="بسمة أسوان">
+                    <div class="hotel-image">
+                        <img src="images/hotels/6_Rixos_Sharm_El_Sheikh_Adults_Only.png" alt="بسمة أسوان">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>بسمة أسوان</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق 4 نجوم يقع على تلة مرتفعة بإطلالة خلابة على النيل. يتميز بأسعاره المناسبة وخدماته الممتازة.</p>
+                                <div class="hotel-price">السعر: من 80$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=24.0889,32.8998" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">بسمة أسوان</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 80$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="basma"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ai-section" id="ai-chat">
+        <div class="container">
+            <h2 class="section-title">مساعد AI السياحي</h2>
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">مرحباً! أنا مساعدك السياحي الذكي. كيف يمكنني مساعدتك في استكشاف أسوان؟</div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="اسألني عن أسوان...">
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مصر السياحية</h3>
+                    <p>اكتشف سحر مصر من خلال مدنها التاريخية والسياحية الرائعة.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">القاهرة</a></li>
+                        <li><a href="alexandria.html">الإسكندرية</a></li>
+                        <li><a href="luxor.html">الأقصر</a></li>
+                        <li><a href="aswan.html">أسوان</a></li>
+                        <li><a href="sharm.html">شرم الشيخ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تم التطوير بحب - مصر السياحية 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

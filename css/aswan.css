@@ -1,0 +1,9 @@
+@import url('cairo.css');
+
+/* Aswan Theme - Nile Blue & Sunset */
+:root {
+  --primary: #e8a87c;
+  --primary-dark: #c98b5e;
+  --secondary: #1a3a52;
+  --accent: #85dcb0;
+}

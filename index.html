@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القاهرة - عاصمة مصر</title>
+    <link rel="stylesheet" href="css/cairo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-city="cairo" data-lat="30.0444" data-lon="31.2357">
+    <!-- City Transition Overlay -->
+    <div class="transition-overlay" id="transitionOverlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">مصر السياحية</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">القاهرة</a></li>
+                <li><a href="alexandria.html">الإسكندرية</a></li>
+                <li><a href="luxor.html">الأقصر</a></li>
+                <li><a href="aswan.html">أسوان</a></li>
+                <li><a href="sharm.html">شرم الشيخ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle" title="تغيير اللغة">
+                    <i class="fas fa-globe"></i> EN
+                </button>
+                <button class="control-btn" id="themeToggle" title="وضع الظلام/النور">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn" id="favBtn" title="المفضلات">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="control-btn" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Favorites Sidebar -->
+    <div class="favorites-sidebar" id="favoritesSidebar">
+        <div class="favorites-header">
+            <h3><i class="fas fa-heart"></i> <span class="fav-title">المفضلات</span></h3>
+            <button class="close-fav" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/cairo-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">القاهرة</h1>
+            <p class="hero-subtitle">عاصمة مصر وأم الدنيا</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">عام من التاريخ</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20 مليون</span>
+                    <span class="stat-label">نسمة</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">مواقع تراث عالمي</span>
+                </div>
+            </div>
+            <a href="#about" class="scroll-btn">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-main">
+            <i class="fas fa-sun weather-icon" id="weatherIcon"></i>
+            <div class="weather-info">
+                <span class="weather-temp" id="weatherTemp">--°C</span>
+                <span class="weather-desc" id="weatherDesc">--</span>
+            </div>
+        </div>
+        <div class="weather-details" id="weatherDetails"></div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">تعريف القاهرة</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/cairo/2_Visiting_The_Pyramids_of_Giza_Everything.png" alt="القاهرة">
+                </div>
+                <div class="about-text">
+                    <p>القاهرة هي عاصمة جمهورية مصر العربية وأكبر مدينة فيها، وتُعرف بـ "أم الدنيا" و"مدينة الألف مئذنة". تقع على ضفاف نهر النيل، وتعد من أكبر المدن في أفريقيا والعالم العربي.</p>
+                    <p>تأسست القاهرة الفاطمية عام 969 م على يد القائد جوهر الصقلي، وتحتوي على آلاف المعالم الإسلامية والقبطية والفرعونية. تضم المدينة أهرامات الجيزة وأبو الهول، وهي من عجائب الدنيا السبع القديمة.</p>
+                    <p>تتميز القاهرة بمزيجها الفريد من الحضارات المختلفة، من العصر الفرعوني مروراً بالعصر القبطي والإسلامي، وحتى العصر الحديث، مما يجعلها متحفاً مفتوحاً يعيش فيه الزوار تجربة فريدة.</p>
+                    <div class="about-tags">
+                        <span class="tag">تاريخ</span>
+                        <span class="tag">ثقافة</span>
+                        <span class="tag">أثار</span>
+                        <span class="tag">فنون</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Attractions Section -->
+    <section class="section attractions-section" id="attractions">
+        <div class="container">
+            <h2 class="section-title">الأماكن الأثرية والسياحية</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-lat="29.9792" data-lon="31.1342" data-name="أهرامات الجيزة">
+                    <div class="attraction-image">
+                        <img src="images/cairo/8_Pyramids_of_Giza_History_Location.png" alt="أهرامات الجيزة">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>أهرامات الجيزة</h3>
+                                <p>أحد عجائب الدنيا السبع القديمة، بناها الفراعنة قبل أكثر من 4500 عام. تضم الأهرامات الثلاثة الكبرى: خوفو، خفرع، منقرع، وأبو الهول العظيم.</p>
+                                <div class="attraction-price">سعر التذكرة: 200 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=29.9792,31.1342" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">أهرامات الجيزة</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="pyramids"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="30.0478" data-lon="31.2336" data-name="المتحف المصري">
+                    <div class="attraction-image">
+                        <img src="images/cairo/5_A_Visual_Tour_of_the_Egyptian_Museum.png" alt="المتحف المصري">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>المتحف المصري</h3>
+                                <p>يحتوي على أكبر مجموعة أثرية فرعونية في العالم بما فيها كنوز توت عنخ آمون الذهبية وآلاف القطع الأثرية النادرة التي تعود لعصور مختلفة.</p>
+                                <div class="attraction-price">سعر التذكرة: 75 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=30.0478,31.2336" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">المتحف المصري</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="museum"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="30.0287" data-lon="31.2599" data-name="قلعة صلاح الدين">
+                    <div class="attraction-image">
+                        <img src="images/cairo/3_The_History_of_Cairo_Citadel_From.png" alt="قلعة صلاح الدين">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>قلعة صلاح الدين</h3>
+                                <p>تحصين ضخم بناه صلاح الدين الأيوبي في القرن الثاني عشر على هضبة المقطم. تضم مسجد محمد علي باشا ذو المآذن المعلقة بالقباب.</p>
+                                <div class="attraction-price">سعر التذكرة: 100 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=30.0287,31.2599" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">قلعة صلاح الدين</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="citadel"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="30.0477" data-lon="31.2622" data-name="خان الخليلي">
+                    <div class="attraction-image">
+                        <img src="images/cairo/4_8_Best_Things_To_Buy_In_Khan_El_Khalili.png" alt="خان الخليلي">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>خان الخليلي</h3>
+                                <p>سوق تاريخي يعود تاريخه إلى القرن الـ14، يتميز بأزقته الضيقة ومتاجره التقليدية التي تبيع الحرف اليدوية والتحف والعطور والبهارات.</p>
+                                <div class="attraction-price">الدخول مجاني</div>
+                                <a href="https://maps.google.com/?q=30.0477,31.2622" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">خان الخليلي</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="khan"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/cairo/2_Visiting_The_Pyramids_of_Giza_Everything.png" alt="أهرامات الجيزة">
+                    <div class="gallery-caption">أهرامات الجيزة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cairo/5_A_Visual_Tour_of_the_Egyptian_Museum.png" alt="المتحف المصري">
+                    <div class="gallery-caption">المتحف المصري</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cairo/3_The_History_of_Cairo_Citadel_From.png" alt="قلعة صلاح الدين">
+                    <div class="gallery-caption">قلعة صلاح الدين</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cairo/4_8_Best_Things_To_Buy_In_Khan_El_Khalili.png" alt="خان الخليلي">
+                    <div class="gallery-caption">خان الخليلي</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cairo/1__The_Old_Egyptian_Museum_in_Cairo.png" alt="ميدان التحرير">
+                    <div class="gallery-caption">ميدان التحرير</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/cairo/6_The_Egyptian_Museum_Cairo_Egyptian.png" alt="القاهرة الجديدة">
+                    <div class="gallery-caption">القاهرة الجديدة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels Section -->
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <h2 class="section-title">الفنادق والإقامة</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-lat="30.0715" data-lon="31.2276" data-name="فندق فيرمونت نايل سيتي">
+                    <div class="hotel-image">
+                        <img src="images/hotels/2_Luxury_Hotel_in_Cairo_Fairmont_Nile.png" alt="فيرمونت نايل سيتي">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>فيرمونت نايل سيتي</h3>
+                                <div class="hotel-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>فندق فاخر يقع في أبراج نايل سيتي بإطلالة رائعة على النيل. يقدم غرفاً أنيقة ومطاعم عالمية ومرافق ترفيه متكاملة.</p>
+                                <div class="hotel-price">السعر: من 300$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=30.0715,31.2276" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">فيرمونت نايل سيتي</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 300$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="fairmont"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="30.0444" data-lon="31.2357" data-name="فندق ماريوت القاهرة">
+                    <div class="hotel-image">
+                        <img src="images/hotels/4_FAIRMONT_NILE_CITY_Updated_2026_Prices.png" alt="ماريوت القاهرة">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>ماريوت القاهرة</h3>
+                                <div class="hotel-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>يقع في قلب القاهرة على كورنيش النيل، يقدم إطلالات خلابة وخدمات عالمية المستوى مع مطاعم متنوعة وسبا فاخر.</p>
+                                <div class="hotel-price">السعر: من 250$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=30.0444,31.2357" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">ماريوت القاهرة</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 250$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="marriott"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="29.9856" data-lon="31.1342" data-name="فندق بست فيو بيراميدز">
+                    <div class="hotel-image">
+                        <img src="images/hotels/8_Fairmont_Nile_City_Cairo_Reviews.png" alt="بست فيو بيراميدز">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>بست فيو بيراميدز</h3>
+                                <div class="hotel-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>فندق 4 نجوم بإطلالة مباشرة على الأهرامات وأبو الهول. يتميز بموقعه الفريد وأسعاره المناسبة.</p>
+                                <div class="hotel-price">السعر: من 80$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=29.9856,31.1342" target="_blank" class="location-btn">
+                                    <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">بست فيو بيراميدز</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 80$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="pyramids-view"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Section -->
+    <section class="section ai-section" id="ai-chat">
+        <div class="container">
+            <h2 class="section-title">مساعد AI السياحي</h2>
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">
+                            مرحباً! أنا مساعدك السياحي الذكي. كيف يمكنني مساعدتك في استكشاف القاهرة؟
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="اسألني عن القاهرة...">
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مصر السياحية</h3>
+                    <p>اكتشف سحر مصر من خلال مدنها التاريخية والسياحية الرائعة.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">القاهرة</a></li>
+                        <li><a href="alexandria.html">الإسكندرية</a></li>
+                        <li><a href="luxor.html">الأقصر</a></li>
+                        <li><a href="aswan.html">أسوان</a></li>
+                        <li><a href="sharm.html">شرم الشيخ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تم التطوير بحب - مصر السياحية 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

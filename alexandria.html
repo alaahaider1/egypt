@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإسكندرية - عروس البحر المتوسط</title>
+    <link rel="stylesheet" href="css/alexandria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-city="alexandria" data-lat="31.2001" data-lon="29.9187">
+    <div class="transition-overlay" id="transitionOverlay"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">مصر السياحية</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">القاهرة</a></li>
+                <li><a href="alexandria.html" class="active">الإسكندرية</a></li>
+                <li><a href="luxor.html">الأقصر</a></li>
+                <li><a href="aswan.html">أسوان</a></li>
+                <li><a href="sharm.html">شرم الشيخ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle"><i class="fas fa-globe"></i> EN</button>
+                <button class="control-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <button class="control-btn" id="favBtn"><i class="fas fa-heart"></i></button>
+                <button class="control-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="favorites-sidebar" id="favoritesSidebar">
+        <div class="favorites-header">
+            <h3><i class="fas fa-heart"></i> <span class="fav-title">المفضلات</span></h3>
+            <button class="close-fav" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/alexandria-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">الإسكندرية</h1>
+            <p class="hero-subtitle">عروس البحر المتوسط</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">2300+</span><span class="stat-label">عام من التاريخ</span></div>
+                <div class="stat"><span class="stat-number">5 مليون</span><span class="stat-label">نسمة</span></div>
+                <div class="stat"><span class="stat-number">32 كم</span><span class="stat-label">طول الكورنيش</span></div>
+            </div>
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-main">
+            <i class="fas fa-sun weather-icon" id="weatherIcon"></i>
+            <div class="weather-info">
+                <span class="weather-temp" id="weatherTemp">--°C</span>
+                <span class="weather-desc" id="weatherDesc">--</span>
+            </div>
+        </div>
+        <div class="weather-details" id="weatherDetails"></div>
+    </div>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">تعريف الإسكندرية</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/alexandria/1_Library_of_Alexandria_Secrets_of.png" alt="الإسكندرية">
+                </div>
+                <div class="about-text">
+                    <p>الإسكندرية هي ثاني أكبر مدينة في مصر وعاصمتها الساحلية، تأسست على يد الإسكندر الأكبر عام 331 قبل الميلاد. كانت مركزاً للحضارة الهلنستية ومقراً لمكتبة الإسكندرية القديمة.</p>
+                    <p>تتميز المدينة بأجوائها البحرية الفريدة وطابعها الأوروبي المميز. تضم شواطئها الرملية البيضاء وكورنيشها الطويل الذي يمتد لأكثر من 32 كم.</p>
+                    <p>تضم الإسكندرية معالم تاريخية فريدة مثل قلعة قايتباي ومكتبة الإسكندرية الجديدة وعمود السواري وكثير من المعالم الرومانية والبطلمية.</p>
+                    <div class="about-tags">
+                        <span class="tag">بحر</span>
+                        <span class="tag">تاريخ</span>
+                        <span class="tag">ثقافة</span>
+                        <span class="tag">سياحة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section attractions-section" id="attractions">
+        <div class="container">
+            <h2 class="section-title">الأماكن الأثرية والسياحية</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-lat="31.2140" data-lon="29.8856" data-name="قلعة قايتباي">
+                    <div class="attraction-image">
+                        <img src="images/alexandria/2_Explore_Qaitbay_Citadel_Architecture.png" alt="قلعة قايتباي">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>قلعة قايتباي</h3>
+                                <p>حصن دفاعي ضخم بناه السلطان الأشرف أبو النصر قايتباي عام 1477 على أنقوب فنار الإسكندرية القديم. تعد من أهم المعالم الأثرية في المدينة.</p>
+                                <div class="attraction-price">سعر التذكرة: 60 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=31.2140,29.8856" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">قلعة قايتباي</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="qaitbay"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="31.2089" data-lon="29.9092" data-name="مكتبة الإسكندرية">
+                    <div class="attraction-image">
+                        <img src="images/alexandria/1_Library_of_Alexandria_Secrets_of.png" alt="مكتبة الإسكندرية">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>مكتبة الإسكندرية</h3>
+                                <p>إعادة حديثة لمكتبة الإسكندرية القديمة، تضم أكثر من 8 ملايين كتاب. تصميمها الفريد على شكل قرص الشمس يجعلها تحفة معمارية.</p>
+                                <div class="attraction-price">سعر التذكرة: 25 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=31.2089,29.9092" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">مكتبة الإسكندرية</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="library"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="31.2886" data-lon="30.0159" data-name="حدائق المنتزه">
+                    <div class="attraction-image">
+                        <img src="images/alexandria/7_Montaza_Palace_Tripadvisor.png" alt="حدائق المنتزه">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>حدائق المنتزه</h3>
+                                <p>قصر ملكي تاريخي يعود للعائلة المالكة في مصر، يقع على شاطئ البحر ويحيط به حدائق غناء تمتد على مساحة 370 فداناً.</p>
+                                <div class="attraction-price">سعر التذكرة: 25 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=31.2886,30.0159" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">حدائق المنتزه</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="montaza"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="31.1787" data-lon="29.8925" data-name="مقابر كوم الشقافة">
+                    <div class="attraction-image">
+                        <img src="images/alexandria/3_Explore_the_Great_Catacombs_of_Kom.png" alt="مقابر كوم الشقافة">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>مقابر كوم الشقافة</h3>
+                                <p>أكبر مقبرة رومانية مصرية، تعود للقرن الثاني الميلادي. تتميز بتصميمها الفريد الذي يمزج بين الفنون المصرية واليونانية والرومانية.</p>
+                                <div class="attraction-price">سعر التذكرة: 80 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=31.1787,29.8925" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">مقابر كوم الشقافة</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="catacombs"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/alexandria/2_Explore_Qaitbay_Citadel_Architecture.png" alt="قلعة قايتباي">
+                    <div class="gallery-caption">قلعة قايتباي</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/alexandria/1_Library_of_Alexandria_Secrets_of.png" alt="مكتبة الإسكندرية">
+                    <div class="gallery-caption">مكتبة الإسكندرية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/alexandria/7_Montaza_Palace_Tripadvisor.png" alt="المنتزه">
+                    <div class="gallery-caption">حدائق المنتزه</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/alexandria/3_Explore_the_Great_Catacombs_of_Kom.png" alt="كوم الشقافة">
+                    <div class="gallery-caption">مقابر كوم الشقافة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/alexandria/8_The_Citadel_of_Qaitbay.png" alt="كورنيش">
+                    <div class="gallery-caption">كورنيش الإسكندرية</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/alexandria/4_The_Catacombs_of_Kom_El_Shoqafa_Wonders.png" alt="عمود السواري">
+                    <div class="gallery-caption">عمود السواري</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <h2 class="section-title">الفنادق والإقامة</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-lat="31.2479" data-lon="29.9666" data-name="فندق سان ستيفانو جراند بلازا">
+                    <div class="hotel-image">
+                        <img src="images/hotels/9_Sofitel_Legend_Old_Cataract_Aswan.png" alt="سان ستيفانو">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>سان ستيفانو جراند بلازا</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق فاخر يقع في حي سان ستيفانو الراقي، يتميز بإطلالة رائعة على البحر وخدمات عالمية المستوى.</p>
+                                <div class="hotel-price">السعر: من 200$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=31.2479,29.9666" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">سان ستيفانو جراند بلازا</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 200$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="san-stefano"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="31.2456" data-lon="29.9678" data-name="فندق فور سيزون الإسكندرية">
+                    <div class="hotel-image">
+                        <img src="images/hotels/5_SOFITEL_LEGEND_OLD_CATARACT_ASWAN.png" alt="فور سيزون">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>فور سيزون الإسكندرية</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>يقع على كورنيش البحر مباشرة، يقدم غرفاً فاخرة ومطاعم متنوعة وسبا متكامل.</p>
+                                <div class="hotel-price">السعر: من 250$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=31.2456,29.9678" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">فور سيزون الإسكندرية</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 250$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="four-seasons"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="31.2001" data-lon="29.9187" data-name="فندق هيلتون كورنيش">
+                    <div class="hotel-image">
+                        <img src="images/hotels/7_STEIGENBERGER_NILE_PALACE_Updated.png" alt="هيلتون كورنيش">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>هيلتون كورنيش الإسكندرية</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق 4 نجوم يقع في قلب المدينة على كورنيش البحر، يتميز بموقعه المميز وأسعاره المعقولة.</p>
+                                <div class="hotel-price">السعر: من 120$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=31.2001,29.9187" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">هيلتون كورنيش</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 120$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="hilton"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ai-section" id="ai-chat">
+        <div class="container">
+            <h2 class="section-title">مساعد AI السياحي</h2>
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">مرحباً! أنا مساعدك السياحي الذكي. كيف يمكنني مساعدتك في استكشاف الإسكندرية؟</div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="اسألني عن الإسكندرية...">
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مصر السياحية</h3>
+                    <p>اكتشف سحر مصر من خلال مدنها التاريخية والسياحية الرائعة.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">القاهرة</a></li>
+                        <li><a href="alexandria.html">الإسكندرية</a></li>
+                        <li><a href="luxor.html">الأقصر</a></li>
+                        <li><a href="aswan.html">أسوان</a></li>
+                        <li><a href="sharm.html">شرم الشيخ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تم التطوير بحب - مصر السياحية 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

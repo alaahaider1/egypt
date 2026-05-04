@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأقصر - مدينة المائة باب</title>
+    <link rel="stylesheet" href="css/luxor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-city="luxor" data-lat="25.6872" data-lon="32.6396">
+    <div class="transition-overlay" id="transitionOverlay"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">مصر السياحية</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">القاهرة</a></li>
+                <li><a href="alexandria.html">الإسكندرية</a></li>
+                <li><a href="luxor.html" class="active">الأقصر</a></li>
+                <li><a href="aswan.html">أسوان</a></li>
+                <li><a href="sharm.html">شرم الشيخ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle"><i class="fas fa-globe"></i> EN</button>
+                <button class="control-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <button class="control-btn" id="favBtn"><i class="fas fa-heart"></i></button>
+                <button class="control-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="favorites-sidebar" id="favoritesSidebar">
+        <div class="favorites-header">
+            <h3><i class="fas fa-heart"></i> <span class="fav-title">المفضلات</span></h3>
+            <button class="close-fav" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/luxor-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">الأقصر</h1>
+            <p class="hero-subtitle">مدينة المائة باب</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">4000+</span><span class="stat-label">عام من التاريخ</span></div>
+                <div class="stat"><span class="stat-number">500 ألف</span><span class="stat-label">نسمة</span></div>
+                <div class="stat"><span class="stat-number">63</span><span class="stat-label">مقبرة بوادي الملوك</span></div>
+            </div>
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-main">
+            <i class="fas fa-sun weather-icon" id="weatherIcon"></i>
+            <div class="weather-info">
+                <span class="weather-temp" id="weatherTemp">--°C</span>
+                <span class="weather-desc" id="weatherDesc">--</span>
+            </div>
+        </div>
+        <div class="weather-details" id="weatherDetails"></div>
+    </div>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">تعريف الأقصر</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/luxor/1_Discovering_the_Karnak_Temple_History.png" alt="الأقصر">
+                </div>
+                <div class="about-text">
+                    <p>الأقصر هي مدينة الأقصر (طيبة القديمة) عاصمة مصر القديمة، وتُعرف بـ "مدينة المائة باب" و"مدينة الشمس". تقع على ضفاف نهر النيل وتضم أكبر مجموعة من المعابد والآثار الفرعونية في العالم.</p>
+                    <p>تضم الأقصر كنوزاً أثرية لا تُقدر بثمن، منها معبد الكرنك الأكبر في العالم، ومعبد الأقصر، ووادي الملوك الذي يضم مقبرة توت عنخ آمون الشهيرة.</p>
+                    <p>تتميز الأقصر بأجوائها الصحراوية الساحرة وشروق الشمس الذهبي على ضفاف النيل، مما يجعلها وجهة سياحية فريدة لعشاق التاريخ والآثار.</p>
+                    <div class="about-tags">
+                        <span class="tag">آثار فرعونية</span>
+                        <span class="tag">تاريخ</span>
+                        <span class="tag">معابد</span>
+                        <span class="tag">مقابر ملكية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section attractions-section" id="attractions">
+        <div class="container">
+            <h2 class="section-title">الأماكن الأثرية والسياحية</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-lat="25.7188" data-lon="32.6573" data-name="معبد الكرنك">
+                    <div class="attraction-image">
+                        <img src="images/luxor/1_Discovering_the_Karnak_Temple_History.png" alt="معبد الكرنك">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>معبد الكرنك</h3>
+                                <p>أكبر مجمع معابد ديني في العالم، بناه الفراعنة على مدى 2000 عام. يضم صرحاً ضخماً وأعمدة شاهقة وأبراجاً ضخمة.</p>
+                                <div class="attraction-price">سعر التذكرة: 200 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=25.7188,32.6573" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">معبد الكرنك</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="karnak"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="25.6995" data-lon="32.6391" data-name="وادي الملوك">
+                    <div class="attraction-image">
+                        <img src="images/luxor/2_Valley_of_the_Kings_2026_All_You.png" alt="وادي الملوك">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>وادي الملوك</h3>
+                                <p>مقبرة ملوك الدولة الحديثة الفرعونية، تضم 63 مقبرة منها مقبرة توت عنخ آمون الشهيرة التي اكتشفت عام 1922.</p>
+                                <div class="attraction-price">سعر التذكرة: 260 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=25.6995,32.6391" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">وادي الملوك</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="valley-kings"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="25.6377" data-lon="32.5945" data-name="معبد حتشبسوت">
+                    <div class="attraction-image">
+                        <img src="images/luxor/4_The_Temple_of_Hatshepsut_World_History.png" alt="معبد حتشبسوت">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>معبد حتشبسوت</h3>
+                                <p>معبد جنائزي فريد منحوت في صخور الدير البحري، بناه الملكة حتشبسوت من أعظم ملكات مصر القديمة.</p>
+                                <div class="attraction-price">سعر التذكرة: 140 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=25.6377,32.5945" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">معبد حتشبسوت</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="hatshepsut"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="25.6995" data-lon="32.6391" data-name="معبد الأقصر">
+                    <div class="attraction-image">
+                        <img src="images/luxor/5_Luxor_Temple_History_and_Facts_History.png" alt="معبد الأقصر">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>معبد الأقصر</h3>
+                                <p>معبد ضخم بناه الملك أمنحتب الثالث ورمسيس الثاني، يقع في قلب المدينة ويرتبط بطريق الكباش الشهير بمعبد الكرنك.</p>
+                                <div class="attraction-price">سعر التذكرة: 180 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=25.6995,32.6391" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">معبد الأقصر</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="luxor-temple"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/luxor/1_Discovering_the_Karnak_Temple_History.png" alt="معبد الكرنك">
+                    <div class="gallery-caption">معبد الكرنك</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/luxor/2_Valley_of_the_Kings_2026_All_You.png" alt="وادي الملوك">
+                    <div class="gallery-caption">وادي الملوك</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/luxor/4_The_Temple_of_Hatshepsut_World_History.png" alt="حتشبسوت">
+                    <div class="gallery-caption">معبد حتشبسوت</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/luxor/5_Luxor_Temple_History_and_Facts_History.png" alt="معبد الأقصر">
+                    <div class="gallery-caption">معبد الأقصر</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/luxor/3_Luxor_Valley_of_the_Kings_Hatshepsut.png" alt="مقبرة توت عنخ آمون">
+                    <div class="gallery-caption">مقبرة توت عنخ آمون</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/luxor/7_The_Ultimate_Guide_to_Karnak_Temple.png" alt="طريق الكباش">
+                    <div class="gallery-caption">طريق الكباش</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <h2 class="section-title">الفنادق والإقامة</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-lat="25.6872" data-lon="32.6396" data-name="فندق هيلتون الأقصر">
+                    <div class="hotel-image">
+                        <img src="images/hotels/1_Steigenberger_Nile_Palace_Luxor_Convention.png" alt="هيلتون الأقصر">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>هيلتون الأقصر</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق فاخر يقع على ضفاف النيل مباشرة، يقدم إطلالات خلابة على النيل والمعابد ومرافق ترفيه متكاملة.</p>
+                                <div class="hotel-price">السعر: من 180$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=25.6872,32.6396" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">هيلتون الأقصر</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 180$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="hilton-luxor"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="25.7001" data-lon="32.6401" data-name="فندق سوفيتيل وينتر بالاس">
+                    <div class="hotel-image">
+                        <img src="images/hotels/7_STEIGENBERGER_NILE_PALACE_Updated.png" alt="وينتر بالاس">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>سوفيتيل وينتر بالاس</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق تاريخي فاخر بني عام 1886، استضاف ملوكاً وأمراء وشخصيات تاريخية. يتميز بديكوره الكلاسيكي الفاخر.</p>
+                                <div class="hotel-price">السعر: من 220$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=25.7001,32.6401" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">سوفيتيل وينتر بالاس</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 220$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="winter-palace"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="25.6872" data-lon="32.6396" data-name="فندق بافيليون وينتر الأقصر">
+                    <div class="hotel-image">
+                        <img src="images/hotels/1_Steigenberger_Nile_Palace_Luxor_Convention.png" alt="بافيليون وينتر">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>بافيليون وينتر</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق 4 نجوم بإطلالة مباشرة على النيل ومعبد الأقصر، يتميز بخدماته الممتازة وأسعاره المعقولة.</p>
+                                <div class="hotel-price">السعر: من 90$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=25.6872,32.6396" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">بافيليون وينتر</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 90$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="pavillon"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ai-section" id="ai-chat">
+        <div class="container">
+            <h2 class="section-title">مساعد AI السياحي</h2>
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">مرحباً! أنا مساعدك السياحي الذكي. كيف يمكنني مساعدتك في استكشاف الأقصر؟</div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="اسألني عن الأقصر...">
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مصر السياحية</h3>
+                    <p>اكتشف سحر مصر من خلال مدنها التاريخية والسياحية الرائعة.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">القاهرة</a></li>
+                        <li><a href="alexandria.html">الإسكندرية</a></li>
+                        <li><a href="luxor.html">الأقصر</a></li>
+                        <li><a href="aswan.html">أسوان</a></li>
+                        <li><a href="sharm.html">شرم الشيخ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تم التطوير بحب - مصر السياحية 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

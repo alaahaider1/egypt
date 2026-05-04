@@ -1,0 +1,11 @@
+@import url('cairo.css');
+
+/* Alexandria Theme Colors */
+:root {
+  --primary: #4a90d9;
+  --primary-dark: #357abd;
+  --secondary: #1e3a5f;
+  --accent: #e74c3c;
+}
+
+.hero-title { color: #fff; }

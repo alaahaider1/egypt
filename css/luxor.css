@@ -1,0 +1,9 @@
+@import url('cairo.css');
+
+/* Luxor Theme - Ancient Gold & Desert */
+:root {
+  --primary: #c9a84c;
+  --primary-dark: #a8852a;
+  --secondary: #2c1810;
+  --accent: #d4574a;
+}

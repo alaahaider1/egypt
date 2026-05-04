@@ -1,0 +1,9 @@
+@import url('cairo.css');
+
+/* Sharm Theme - Tropical Coral */
+:root {
+  --primary: #00b4d8;
+  --primary-dark: #0096c7;
+  --secondary: #0c2d48;
+  --accent: #ff6b6b;
+}

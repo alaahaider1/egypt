@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرم الشيخ - مدينة السلام</title>
+    <link rel="stylesheet" href="css/sharm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-city="sharm" data-lat="27.9158" data-lon="34.3299">
+    <div class="transition-overlay" id="transitionOverlay"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">مصر السياحية</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">القاهرة</a></li>
+                <li><a href="alexandria.html">الإسكندرية</a></li>
+                <li><a href="luxor.html">الأقصر</a></li>
+                <li><a href="aswan.html">أسوان</a></li>
+                <li><a href="sharm.html" class="active">شرم الشيخ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="control-btn" id="langToggle"><i class="fas fa-globe"></i> EN</button>
+                <button class="control-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <button class="control-btn" id="favBtn"><i class="fas fa-heart"></i></button>
+                <button class="control-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="favorites-sidebar" id="favoritesSidebar">
+        <div class="favorites-header">
+            <h3><i class="fas fa-heart"></i> <span class="fav-title">المفضلات</span></h3>
+            <button class="close-fav" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/sharm-bg.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">شرم الشيخ</h1>
+            <p class="hero-subtitle">مدينة السلام</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">365</span><span class="stat-label">يوم شمس سنوياً</span></div>
+                <div class="stat"><span class="stat-number">75 ألف</span><span class="stat-label">نسمة</span></div>
+                <div class="stat"><span class="stat-number">#1</span><span class="stat-label">وجهة غطس عالمية</span></div>
+            </div>
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-main">
+            <i class="fas fa-sun weather-icon" id="weatherIcon"></i>
+            <div class="weather-info">
+                <span class="weather-temp" id="weatherTemp">--°C</span>
+                <span class="weather-desc" id="weatherDesc">--</span>
+            </div>
+        </div>
+        <div class="weather-details" id="weatherDetails"></div>
+    </div>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">تعريف شرم الشيخ</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/sharm/3_Rediscover_Sharm_El_Sheikh_The_Jewel.png" alt="شرم الشيخ">
+                </div>
+                <div class="about-text">
+                    <p>شرم الشيخ هي مدينة سياحية مصرية تقع على رأس شبه جزيرة سيناء عند ملتقى خليجي العقبة والسويس، وتُعرف بـ "مدينة السلام" لكونها مكاناً للمؤتمرات الدولية.</p>
+                    <p>تعد شرم الشيخ من أشهر وجهات الغوص في العالم، حيث تتميز بشعابها المرجانية النادرة ومياهها الصافية التي يصل وضوحها لـ 30 متراً.</p>
+                    <p>تضم المدينة محمية رأس محمد الوطنية التي تعد من أجمل المحميات البحرية في العالم، بالإضافة إلى جبال سيناء ودير سانت كاترين التاريخي.</p>
+                    <div class="about-tags">
+                        <span class="tag">بحر أحمر</span>
+                        <span class="tag">غوص</span>
+                        <span class="tag">شعاب مرجانية</span>
+                        <span class="tag">شواطئ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section attractions-section" id="attractions">
+        <div class="container">
+            <h2 class="section-title">الأماكن الأثرية والسياحية</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-lat="27.7258" data-lon="34.2556" data-name="محمية رأس محمد">
+                    <div class="attraction-image">
+                        <img src="images/sharm/1_Ras_Mohammed_National_Park_Sharm.png" alt="رأس محمد">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>محمية رأس محمد</h3>
+                                <p>أشهر محمية طبيعية بحرية في مصر، تضم شعاب مرجانية نادرة وأسماك ملونة وموقع غطس عالمي.</p>
+                                <div class="attraction-price">سعر التذكرة: 100 جنيه مصري</div>
+                                <a href="https://maps.google.com/?q=27.7258,34.2556" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">محمية رأس محمد</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="ras-mohammed"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="27.9122" data-lon="34.3258" data-name="خليج نعمة">
+                    <div class="attraction-image">
+                        <img src="images/sharm/2_Naama_Bay_History_Climate_Activities.png" alt="خليج نعمة">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>خليج نعمة</h3>
+                                <p>قلب شرم الشيخ النابض، يضم شاطئ رملي رائع وممشى سياحي ومطاعم وكافيهات ومراكز تسوق.</p>
+                                <div class="attraction-price">الدخول مجاني</div>
+                                <a href="https://maps.google.com/?q=27.9122,34.3258" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">خليج نعمة</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="naama"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="28.5557" data-lon="33.9723" data-name="دير سانت كاترين">
+                    <div class="attraction-image">
+                        <img src="images/sharm/4_Saint_Catherine_s_Monastery_Discover.png" alt="دير سانت كاترين">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>دير سانت كاترين</h3>
+                                <p>دير تاريخي يقع عند سفح جبل سيناء، يضم مخطوطات نادرة وأيقونات قديمة. موقع تراث عالمي لليونسكو.</p>
+                                <div class="attraction-price">سعر التذكرة: مجاني</div>
+                                <a href="https://maps.google.com/?q=28.5557,33.9723" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">دير سانت كاترين</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="st-catherine"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="attraction-card" data-lat="27.8667" data-lon="34.3000" data-name="جزيرة تيران">
+                    <div class="attraction-image">
+                        <img src="images/sharm/5_Ras_Mohammed_National_Park_Ras_Mohamed.png" alt="جزيرة تيران">
+                        <div class="attraction-overlay">
+                            <div class="attraction-info">
+                                <h3>جزيرة تيران</h3>
+                                <p>جزيرة مرجانية خلابة في مضائق تيران، تعد من أشهر مواقع الغوص والسنوركل في البحر الأحمر.</p>
+                                <div class="attraction-price">رحلة بحرية: من 50$</div>
+                                <a href="https://maps.google.com/?q=27.8667,34.3000" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="attraction-title">جزيرة تيران</h3>
+                    <button class="fav-icon" data-type="attraction" data-id="tiran"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/sharm/1_Ras_Mohammed_National_Park_Sharm.png" alt="رأس محمد">
+                    <div class="gallery-caption">محمية رأس محمد</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sharm/2_Naama_Bay_History_Climate_Activities.png" alt="خليج نعمة">
+                    <div class="gallery-caption">خليج نعمة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sharm/3_Rediscover_Sharm_El_Sheikh_The_Jewel.png" alt="شاطئ شرم">
+                    <div class="gallery-caption">شواطئ شرم الشيخ</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sharm/4_Saint_Catherine_s_Monastery_Discover.png" alt="دير سانت كاترين">
+                    <div class="gallery-caption">دير سانت كاترين</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sharm/7_Ras_Muhammad_National_Park_Official.png" alt="الشعاب المرجانية">
+                    <div class="gallery-caption">الشعاب المرجانية</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="images/sharm/8_Explore_Sharm_El_Sheikh_Egypt_s_Premier.png" alt="الغروب في شرم">
+                    <div class="gallery-caption">الغروب في شرم الشيخ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hotels-section" id="hotels">
+        <div class="container">
+            <h2 class="section-title">الفنادق والإقامة</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card" data-lat="27.9158" data-lon="34.3299" data-name="ريكسوس شرم الشيخ">
+                    <div class="hotel-image">
+                        <img src="images/hotels/3__Rixos_Adults_Only_18_Rixos.png" alt="ريكسوس">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>ريكسوس شرم الشيخ</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>منتجع فاخر شامل يقع في خليج نعمة، يقدم شاطئاً رملياً خاصاً ومرافق ترفيه متكاملة وخدمات راقية.</p>
+                                <div class="hotel-price">السعر: من 250$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=27.9158,34.3299" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">ريكسوس شرم</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 250$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="rixos"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="27.9158" data-lon="34.3299" data-name="فور سيزون شرم الشيخ">
+                    <div class="hotel-image">
+                        <img src="images/hotels/10_Rixos_Premium_Seagate_All_inclusive.png" alt="فور سيزون">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>فور سيزون شرم</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>منتجع فاخر على خليج القرش، يتميز بتصميمه الأنيق وإطلالته البحرية وخدماته العالمية.</p>
+                                <div class="hotel-price">السعر: من 300$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=27.9158,34.3299" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">فور سيزون شرم</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 300$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="four-seasons-sharm"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="hotel-card" data-lat="27.9158" data-lon="34.3299" data-name="أكوا بارك سيتي">
+                    <div class="hotel-image">
+                        <img src="images/hotels/6_Rixos_Sharm_El_Sheikh_Adults_Only.png" alt="أكوا بارك">
+                        <div class="hotel-overlay">
+                            <div class="hotel-info">
+                                <h3>أكوا بارك سيتي</h3>
+                                <div class="hotel-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>فندق عائلي ممتاز يضم مدينة ملاهي مائية ضخمة وشاطئ خاص وغرف مريحة بأسعار مناسبة.</p>
+                                <div class="hotel-price">السعر: من 100$ / ليلة</div>
+                                <a href="https://maps.google.com/?q=27.9158,34.3299" target="_blank" class="location-btn"><i class="fas fa-map-marker-alt"></i> عرض الموقع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="hotel-title">أكوا بارك سيتي</h3>
+                    <div class="hotel-meta">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="price">من 100$</span>
+                    </div>
+                    <button class="fav-icon" data-type="hotel" data-id="aqua-park"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ai-section" id="ai-chat">
+        <div class="container">
+            <h2 class="section-title">مساعد AI السياحي</h2>
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">مرحباً! أنا مساعدك السياحي الذكي. كيف يمكنني مساعدتك في استكشاف شرم الشيخ؟</div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="اسألني عن شرم الشيخ...">
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مصر السياحية</h3>
+                    <p>اكتشف سحر مصر من خلال مدنها التاريخية والسياحية الرائعة.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">القاهرة</a></li>
+                        <li><a href="alexandria.html">الإسكندرية</a></li>
+                        <li><a href="luxor.html">الأقصر</a></li>
+                        <li><a href="aswan.html">أسوان</a></li>
+                        <li><a href="sharm.html">شرم الشيخ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تم التطوير بحب - مصر السياحية 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
